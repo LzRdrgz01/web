@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Document</title>
+  <link rel='stylesheet' href='template.min.css'>
+</head>
+
+<body>
+  <div id='createIframe'>
+    <div class="form">
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Create</a></li>
+        <li class="tab"><a href="#login">Code</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="signup">
+          <h1>Create Player</h1>
+          <form>
+            <div class="top-row">
+              <div class="field-wrap">
+                <label>Player<span class="req">*</span></label>
+                <select name='player' required='required'>
+                  <option value=''>Select Player</option>
+                  <option value='fluidplayer'>Fluid Player</option>
+                  <option value='jwpl'>JWPlayer</option>
+                  <option value='plyr'>Plyr.io</option>
+                  <option value='video'>Video</option>
+                </select>
+              </div>
+              <div class="field-wrap">
+                <label>Provider<span class="req">*</span></label>
+                <select disabled='disabled' name='provider' required='required'>
+                  <option value=''>Select Provider</option>
+                  <option value='gdrive'>Google Drive</option>
+                  <option value='rand'>Random</option>
+                  <option value='yt'>Youtube</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-wrap">
+              <label>Format Video<span class="req">*</span></label>
+              <input name='format' placeholder='disabled' type="text" disabled='disabled' autocomplete="off" />
+            </div>
+            <div class="field-wrap">
+              <label>Link Video<span class="req">*</span>
+              </label>
+              <input name="link" type="text" placeholder='Link Video' required='required' autocomplete="off" />
+            </div>
+            <button type="submit" class="button button-block">Confirm</button>
+          </form>
+        </div>
+        <div id="login">
+          <h1>Your Code here</h1>
+          <div class="field-wrap">
+            <label>Iframe Code<span class="req">*</span></label>
+            <textarea id="ifcode" type="text"></textarea>
+          </div>
+          <div class="field-wrap">
+            <label>Link<span class="req">*</span></label>
+            <textarea id="links" type="text"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src='template.min.js'></script>
+</body>
+
+</html>
